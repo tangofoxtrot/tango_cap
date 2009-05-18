@@ -40,8 +40,8 @@ namespace :tango do
   desc "Stop the sphinx server"
   task :setup_passenger , :roles => :app do
     passenger_conf = <<-CMD
-<VirtualHost *>
-  ServerName #{application}.conf
+<VirtualHost *:80 >
+  ServerName #{application}.com
   DocumentRoot #{current_path}/public
   <directory "#{current_path}/public">
     Order allow,deny
