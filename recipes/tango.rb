@@ -43,6 +43,7 @@ namespace :tango do
 <VirtualHost *:80 >
   ServerName #{application}.com
   DocumentRoot #{current_path}/public
+  PassengerHighPerformance on  
   <directory "#{current_path}/public">
     Order allow,deny
     Allow from all
